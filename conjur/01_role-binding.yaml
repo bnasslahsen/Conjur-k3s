@@ -7,9 +7,23 @@ metadata:
   namespace: testapp
 subjects:
 - kind: ServiceAccount
-  name: conjur-cluster
-  namespace: conjur-server
+  name: service-account-based-app
+  namespace: cyberark-conjur
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: my-cluster-role
+
+rules:
+  - apiGroups: [""] # "" indicates the core API group
+    resources: ["pods", "serviceaccounts"]
+    verbs: ["get", "list"]
+  - apiGroups: ["extensions"]
+    resources: ["deployments", "replicasets"]
+    verbs: ["get", "list"]
+  - apiGroups: ["apps"]
+    resources: ["deployments", "statefulsets", "replicasets"]
+    verbs: ["get", "list"]
+  - apiGroups: [""]
+    resources: ["pods/exec"]
+    verbs: ["create", "get"]
