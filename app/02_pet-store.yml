@@ -41,7 +41,7 @@ spec:
         hostnames:
         - "host-1"
       containers:
-      - image: cyberark/demo-app
+      - image: dbskill/demo-app:latest
         imagePullPolicy: IfNotPresent
         name: testapp-secure
         ports:
