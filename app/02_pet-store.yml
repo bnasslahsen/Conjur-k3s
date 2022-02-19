@@ -40,7 +40,6 @@ spec:
       - ip: "10.0.0.1"
         hostnames:
         - "host-1"
-
       containers:
       - image: cyberark/demo-app
         imagePullPolicy: IfNotPresent
@@ -104,3 +103,4 @@ spec:
           configMap:
             name: secretless-config
             defaultMode: 420
+
