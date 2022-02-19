@@ -81,7 +81,7 @@ spec:
           - name: CONJUR_ACCOUNT
             value: "devops-org"
           - name: CONJUR_AUTHN_LOGIN
-            value: "host/conjur/authn-k8s/dev/apps/service-account-based-app"
+            value: "host/conjur/authn-k8s/dev/apps/conjur-serviceaccount"
           - name: CONJUR_SSL_CERTIFICATE
             valueFrom:
               configMapKeyRef:
