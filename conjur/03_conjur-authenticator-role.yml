@@ -52,7 +52,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: conjur-clusterrole
-  namespace: testapp
+  namespace: default
   labels:
     release: cluster-prep
     heritage: Helm
